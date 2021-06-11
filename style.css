@@ -11,6 +11,11 @@ html, body {
     padding: 0;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 .hero {
     min-height: 100vh;
     background: #353137 url(https://images.unsplash.com/photo-1597415604204-368e71fecaab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=70) fixed center no-repeat;
