@@ -38,3 +38,23 @@ const checkScroll = (e) => {
 
 window.onscroll = checkScroll
 window.onload = checkScroll
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            555: {
+                items: 2
+            },
+            800: {
+                items: 3
+            },
+            1080: {
+                items: 4
+            }
+        }
+    });
+});
