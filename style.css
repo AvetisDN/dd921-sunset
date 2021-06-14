@@ -69,6 +69,7 @@ html, body {
 
 
 .btn {
+    font-family: inherit;
     display: inline-block;
     background: #4b4ca3;
     padding: 1rem 2rem;
@@ -84,6 +85,14 @@ html, body {
 .btn:hover {
     background: #2c2d6e;
 }
+
+.btn-magenta {
+    background: #d330aa;
+}
+.btn-magenta:hover {
+    background: #9c207d;
+}
+
 
 .main-menu {
     padding: 1rem 2rem;
@@ -207,6 +216,63 @@ html, body {
     margin-bottom: 1rem;
 }
 
+/* SECTION: FEEDBACK */
+
+.feedback {
+    background-color: #353137;
+    color: #f2f0f4;
+}
+
+.feedback-container {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+.feedback-form {
+    padding: 1rem 0;
+    flex-basis: 40%;
+}
+.feedback-form p {
+    margin-bottom: 1rem;
+    opacity: .5;
+}
+.feedback-form input, .feedback-form textarea {
+    display: block;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #d2d0d6;
+    color: #353137;
+    font-weight: 500;
+    transition: .3s ease;
+}
+.feedback-form textarea {
+    resize: none;
+    height: 300px;
+}
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+    font-weight: 300;
+}
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    background-color: #f2f0f4;
+    box-shadow: rgba(0,0,0,.6) 0 0 2px 4px;
+}
+
+.feedback-map {
+    flex-grow: 1;
+}
+
+.feedback-map iframe {
+    width: 100%;
+    height: 600px;
+}
 
 /* ADAPTIVE */
 @media (max-width: 1199px) {
@@ -255,6 +321,25 @@ html, body {
     }
 
 
+    .feedback-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .feedback-map {
+        margin-top: 2rem;
+    }
+}
+
+/* SECTION: PRICING */
+.pricing {
+    display: flex;
+    column-gap: 1.5rem;
+}
+.price-plan {
+    text-align: center;
+}
+.price-plan img {
+    width: 70%;
 }
 
 @media (max-width: 768px) {
@@ -268,6 +353,7 @@ html, body {
     .latest-grid .latest-grid__item {
         flex-basis: 40%;
     }
+
 }
 @media (max-width: 540px) {
     .hero-container .hero-left {
@@ -275,5 +361,9 @@ html, body {
     }
     .latest-grid .latest-grid__item {
         flex-basis: 100%;
+    }
+    .pricing {
+        flex-direction: column;
+        row-gap: 1rem;
     }
 }
